@@ -3,6 +3,7 @@ import MazeRunner
 import Collatz
 import UnlimitedGameOfLife
 import LongestPalindrome
+import MatrixMul
 
 spinWords :: String -> String
 spinWords str = unwords [if length x<5 then x else reverse x| x<- words str ]
@@ -17,6 +18,7 @@ grid= [
 main :: IO ()
 main = do
     --putStrLn $ show $ getGeneration grid 1
-    putStrLn $ show $ longestPalindrome "baablkj12345432133d"
+    
+    putStrLn $ show $ matMul [[1, 2],[3,4]] [[2,2],[1,1]]
     
     
