@@ -8,6 +8,11 @@ import MatrixMul
 spinWords :: String -> String
 spinWords str = unwords [if length x<5 then x else reverse x| x<- words str ]
 
+
+
+reverseEveryOther :: String -> String
+reverseEveryOther str= unwords [if (mod i 2)/= 0 then w else reverse w | (i,w)<- zip [1..] (words str)]
+
 grid :: [[Int]]
 grid= [
     [1,0,0,1,1,1,0,1],
